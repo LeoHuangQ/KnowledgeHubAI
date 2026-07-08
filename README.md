@@ -22,6 +22,9 @@ This project was built to demonstrate practical AI application development, back
 * RESTful APIs built with FastAPI
 
 ---
+<img width="851" height="776" alt="Screenshot 2026-07-08 at 4 35 27 PM" src="https://github.com/user-attachments/assets/c7ffd68c-ba1e-48a8-aac3-7deb6df13c7b" />
+
+---
 
 ## Tech Stack
 
