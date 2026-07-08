@@ -338,4 +338,4 @@ This project was built to deepen practical experience with modern AI application
 The focus is on building each stage of the RAG pipeline in a modular, maintainable way while keeping the implementation understandable, extensible, and suitable for real-world backend services.
 
 # Author
-Built by Leo Huang Full-stack engineer with 10+ years experience in scalable systems, fintech, ecommerce, BI, SaaS, customer-facing web applications and AI-powered products.
+Built by Leo Huang Full-stack engineer with 10+ years experience in scalable systems, fin tech, e-commerce, BI, SaaS, customer-facing web applications and AI-powered products.

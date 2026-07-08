@@ -1,13 +1,17 @@
-from fastapi import FastAPI
 import asyncio
-from sse_starlette import EventSourceResponse, ServerSentEvent
-from pydantic import BaseModel
 import json
-from services.loadingService import loading_service
+
 from dotenv import load_dotenv
+from fastapi import FastAPI
+from pydantic import BaseModel
+from sse_starlette import EventSourceResponse, ServerSentEvent
+
+load_dotenv(dotenv_path=".env")
+
+from services.loadingService import loading_service
+from services.ragService import rag_service
 
 app = FastAPI()
-load_dotenv()
 
 class MessagePayload(BaseModel):
     id: int
@@ -32,7 +36,7 @@ async def stream_chat(inputData: str):
 
 @app.post("/chatbot", response_class=EventSourceResponse)
 async def chatbot(payload: MessagePayload):
-    return EventSourceResponse(stream_chat(payload.content))
+    return EventSourceResponse(rag_service(payload.content))
 
 @app.post("/upload", response_class=EventSourceResponse)
 def upload(payload: str):
